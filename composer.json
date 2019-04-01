@@ -1,0 +1,13 @@
+{
+    "name": "zero1/magento2-patches",
+    "description": "Patches for core Magento2",
+    "authors": [
+        {
+            "name": "Arron Moss",
+            "email": "arron.moss@zero1.co.uk"
+        }
+    ],
+    "require": {
+        "cweagans/composer-patches": "^1.6.5"
+    }
+
