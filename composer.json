@@ -8,7 +8,7 @@
         }
     ],
     "require": {
-        "cweagans/composer-patches": "dev-master#e06f180649733d95fca318755ee12800bb353d07"
+        "cweagans/composer-patches": "^1.6.5"
     }
 
 }
