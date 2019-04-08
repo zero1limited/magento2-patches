@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\Console\CommandList">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="zero1_patches_command_patch_list" xsi:type="object">Zero1\Patches\Command\PatchList</item>
+                <item name="zero1_patches_command_patch_add" xsi:type="object">Zero1\Patches\Command\PatchAdd</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

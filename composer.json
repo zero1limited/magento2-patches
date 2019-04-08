@@ -9,6 +9,15 @@
     ],
     "require": {
         "cweagans/composer-patches": "^1.6.5"
+    },
+    "type": "magento2-module",
+    "version": "1.0.3",
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Zero1\\Patches\\": ""
+        }
     }
-
 }
