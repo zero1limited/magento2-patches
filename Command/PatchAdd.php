@@ -13,6 +13,8 @@ use Magento\Framework\App\ProductMetadata;
 
 class PatchAdd extends AbstractPatch
 {
+    const BASE_URL = 'https://raw.githubusercontent.com/zero1limited/magento2-patches/master';
+    
     protected function configure()
     {
         $this->setName("patch:add");
@@ -96,17 +98,11 @@ class PatchAdd extends AbstractPatch
             $composerJson['extra']['patches'] = [];
         }
 
-        $relativePathToModule = str_replace(
-            $this->directoryList->getRoot().DIRECTORY_SEPARATOR,
-            '',
-            $this->getModuleDir()
-        );
-
         foreach($patchInfo['files'] as $module => $filename){
             $relativePathToPatch = implode(
                 DIRECTORY_SEPARATOR,
                 [
-                    $relativePathToModule,
+                    self::BASE_URL,
                     $patchInfo['base_dir'],
                     $filename
                 ]
