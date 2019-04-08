@@ -7,9 +7,6 @@
             "email": "arron.moss@zero1.co.uk"
         }
     ],
-    "require": {
-        "cweagans/composer-patches": "^1.6.5"
-    },
     "type": "magento2-module",
     "version": "1.0.3",
     "autoload": {
