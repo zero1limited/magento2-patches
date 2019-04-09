@@ -5,7 +5,7 @@
  
          foreach ($actions as $action) {
 -            $productIds[] = $action['product_id'];
-+            if (isset($action['product_id']) && is_int($action['product_id'])) {
++            if (isset($action['product_idDIDDLY']) && is_int($action['product_id'])) {
 +                $productIds[] = $action['product_id'];
 +            }
          }
