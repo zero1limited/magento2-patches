@@ -4,18 +4,21 @@ This module makes it easier for a Magento 2 merchant to apply patches in a manne
 
 Core Magento Security patches are split and re-defined so that they can be applied properly using Composer Install.
 
-###Installed
+### Installation Instructions
 ```
 composer require zero1limited/magento2-patches
 composer require cweagans/composer-patches:^1.6.5
 php bin/magento module:enable Zero1_Patches
+```
+
+### Installing/Applying a Patch
+```
 php bin/magento patch:list
 php bin/magento patch:add --patch=PRODSECBUG-2198
 composer install
 ```
 
-
-###Patches Currently Supported
+### Patches Currently Supported
 • PRODSECBUG-2198
 
 
