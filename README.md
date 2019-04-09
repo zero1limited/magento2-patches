@@ -21,7 +21,7 @@ composer install
 ## Current Patches available
 In order to apply the patch please run the above commands passing the patch name (in bold below) after the --patch= as shown above.
 
-• # PRODSECBUG-2198 # https://magento.com/security/patches/magento-2.3.1-2.2.8-and-2.1.17-security-update
+• **PRODSECBUG-2198** https://magento.com/security/patches/magento-2.3.1-2.2.8-and-2.1.17-security-update
 
 
 If you need to apply a Magento patch which is not currently listed please reach out at support@mdoq.io and we will promtly incorporate the patches into this module.
