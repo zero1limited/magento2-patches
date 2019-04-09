@@ -1,6 +1,6 @@
 # magento2-patches
 
-This module makes it easier for a Magento 2 merchant to apply patches in a manner which adheres to standard Composer workflow and many deploymenty pipleline methodologies.
+This module makes it easier for a Magento 2 merchant to apply patches in a manner which adheres to standard Composer workflow and most deployment pipleline methodologies.
 
 Core Magento Security patches are split and re-defined so that they can be applied properly using Composer Install.
 
