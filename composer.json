@@ -25,5 +25,8 @@
         "psr-4": {
             "Zero1\\Patches\\": ""
         }
+    },
+    "suggest": {
+        "mdoq/module-connector": "Allows you to apply and test patches quickly and safely."
     }
 }
