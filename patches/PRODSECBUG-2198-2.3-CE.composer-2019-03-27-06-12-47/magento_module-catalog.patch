@@ -107,6 +107,4 @@
 +            }
          }
      }
- 
-diff --git a/vendor/magento/framework/DB/Adapter/Pdo/Mysql.php b/vendor/magento/framework/DB/Adapter/Pdo/Mysql.php
-index 441da10..69505d4 100644
+     
