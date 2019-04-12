@@ -7,6 +7,15 @@
             "email": "arron.moss@zero1.co.uk"
         }
     ],
+    "keywords": [
+        "magento2 patches",
+        "magento2",
+        "magento 2",
+        "magento",
+        "patch"
+        "patching",
+        "patches"
+    ],
     "type": "magento2-module",
     "version": "1.0.6",
     "autoload": {
