@@ -62,5 +62,19 @@
       "magento/framework": "magento_framework.patch",
       "magento/module-catalog": "magento_module-catalog.patch"
     }
-  }
+  },
+  
+    "Catalog_pagination_issue_on_Elasticsearch_6_composer-2019-10-11-08-07-41": {
+      "name": "Catalog_pagination_issue_on_Elasticsearch_6",
+      "description": "This patch resolves issues that users of Magento 2.3.3 experience in deployments where Elasticsearch 6.x is used as the catalog search engine. Users who attempt to navigate past the first page of search results are unsuccessful, and Magento displays an error message. After this patch is installed, users will be able to page through all search results.",
+      "link": "https://magento.com/tech-resources/download#download2331",
+      "versions": [
+        "2.3.3"
+      ],
+    "base_dir": "patches",
+    "files": {
+        "magento/module-elasticsearch": "Catalog_pagination_issue_on_Elasticsearch_6_composer-2019-10-11-08-07-41.patch"
+    }
+  },
+  
 }
