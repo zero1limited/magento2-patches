@@ -77,4 +77,21 @@
     }
   },
   
+  
+    "PayPal_Express_Checkout_issue_fix_2.3.4_composer-2020-02-13-12-34-09": {
+      "name": "PayPal_Express_Checkout_issue_fix",
+      "description": "This patch resolves the issue which affects orders placed with PayPal Express Checkout where the order’s shipping address specifies a country region that has been manually entered into the text field rather than selected from the drop-down menu on the Shipping page.",
+      "link": "https://magento.com/tech-resources/download#download2331",
+      "versions": [
+        "2.3.4"
+      ],
+    "base_dir": "patches",
+    "files": {
+        "magento/module-paypal": "PayPal_Express_Checkout_issue_fix_2.3.4_composer-2020-02-13-12-34-09.patch"
+    }
+  },
+  
+  
+  
+  
 }
