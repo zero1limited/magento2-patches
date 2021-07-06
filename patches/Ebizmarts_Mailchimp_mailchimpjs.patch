@@ -1,0 +1,13 @@
+--- view/frontend/templates/mailchimpjs.phtml	2021-07-06 08:51:31.874000000 +0000
++++ view/frontend/templates/mailchimpjs.phtml	2021-07-06 08:52:34.740345477 +0000
+@@ -3,6 +3,8 @@
+  * @var $block \Ebizmarts\Mailchimp\Block\Mailchimpjs
+  */
+ $url = $block->getJsUrl();
+-$render = $block->getRender();
+-echo $render->renderTag('script',['type'=>'text/javascript','src'=>$url],'',false);
++if($url){
++    $render = $block->getRender();
++    echo $render->renderTag('script',['type'=>'text/javascript','src'=>$url],'',false);
++}
+ ?>
