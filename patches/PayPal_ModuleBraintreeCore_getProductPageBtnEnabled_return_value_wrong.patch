@@ -1,0 +1,12 @@
+--- Gateway/Config/PayPal/Config.php        2021-07-14 08:34:03.087000000 +0000
++++ Gateway/Config/PayPal/Config.php        2021-07-14 08:34:11.046687311 +0000
+@@ -262,6 +262,6 @@
+      */
+     public function getProductPageBtnEnabled(): bool
+     {
+-        return $this->getValue('button_productpage_enabled');
++        return (bool)$this->getValue('button_productpage_enabled');
+     }
+ }
+ 
+ 
