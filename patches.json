@@ -3,7 +3,7 @@
     "name": "zero1 static maintenance page",
     "description": "This patch provides better performance when switching maintenance mode on/off",
     "versions": [
-      "^2.4"
+      "2.4.1","2.4.2","2.4.3"
     ],
     "base_dir": "patches",
     "files": {
