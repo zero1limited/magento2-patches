@@ -1,5 +1,5 @@
 {
-    "zero1_static_maintenance_page.patch": {
+    "ZERO1-STATIC-MAINTENANCE-PAGE": {
     "name": "zero1 static maintenance page",
     "description": "This patch provides better performance when switching maintenance mode on/off",
     "versions": [
