@@ -1,6 +1,6 @@
 {
     "ZERO1-STATIC-MAINTENANCE-PAGE": {
-    "name": "zero1 static maintenance page",
+    "name": "ZERO1-STATIC-MAINTENANCE-PAGE",
     "description": "This patch provides better performance when switching maintenance mode on/off",
     "versions": [
       "2.4.1","2.4.2","2.4.3"
