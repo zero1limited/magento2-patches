@@ -1,4 +1,17 @@
 {
+    "zero1_static_maintenance_page.patch": {
+    "name": "zero1 static maintenance page",
+    "description": "This patch provides better performance when switching maintenance mode on/off",
+    "versions": [
+      "^2.4"
+    ],
+    "base_dir": "patches",
+    "files": {
+      "magento/magento2-base": "zero1_static_maintenance_page.patch"
+    }
+  },
+  
+  
   "PRODSECBUG-2198-2.1-CE.composer-2019-03-27-06-11-22": {
     "name": "PRODSECBUG-2198",
     "description": "This patch provides protection against the SQL injection vulnerability described under PRODSECBUG-2198",
