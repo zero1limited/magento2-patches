@@ -1,0 +1,29 @@
+--- view/adminhtml/templates/order/creditmemo/create/totals/adjustments.phtml.ORIG	2021-10-24 09:37:49.612343463 +0000
++++ view/adminhtml/templates/order/creditmemo/create/totals/adjustments.phtml	2021-10-24 09:38:56.356804131 +0000
+@@ -16,7 +16,7 @@
+         <td>
+             <input type="text"
+                    name="creditmemo[shipping_amount]"
+-                   value="<?= /* @noEscape */ $block->formatValue($block->getShippingAmount()) ?>"
++                   value="<?= /* @noEscape */ $block->getShippingAmount() ?>"
+                    class="input-text admin__control-text not-negative-amount"
+                    id="shipping_amount" />
+         </td>
+@@ -29,7 +29,7 @@
+         <td>
+             <input type="text"
+                    name="creditmemo[adjustment_positive]"
+-                   value="<?= /* @noEscape */ $block->formatValue($_source->getBaseAdjustmentPositive()) ?>"
++                   value="<?= /* @noEscape */ $_source->getBaseAdjustmentPositive() ?>"
+                    class="input-text admin__control-text not-negative-amount"
+                    id="adjustment_positive" />
+         </td>
+@@ -42,7 +42,7 @@
+         <td>
+             <input type="text"
+                    name="creditmemo[adjustment_negative]"
+-                   value="<?= /* @noEscape */ $block->formatValue($_source->getBaseAdjustmentNegative()) ?>"
++                   value="<?= /* @noEscape */ $_source->getBaseAdjustmentNegative() ?>"
+                    class="input-text admin__control-text not-negative-amount"
+                    id="adjustment_negative"/>
+             <?php $scriptString = <<<script
