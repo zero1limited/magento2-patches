@@ -101,7 +101,18 @@
     "files": {
         "magento/module-paypal": "PayPal_Express_Checkout_issue_fix_2.3.4_composer-2020-02-13-12-34-09.patch"
     }
-  }
+  },
  
+        "Credit_Memo_Amount_Format_Errors": {
+      "name": "Credit_Memo_Amount_Format_Errors",
+      "description": "Magento Credit Memos fail due to £ symbol inserted into field and causing exception",
+      "versions": [
+        "2.4.1","2.4.2","2.4.3"
+      ],
+    "base_dir": "patches",
+    "files": {
+        "magento/module-sales": "credit-totals.patch"
+    }
+  }
   
 }
