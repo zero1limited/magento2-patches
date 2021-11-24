@@ -14,7 +14,7 @@
         "patches"
     ],
     "type": "magento2-module",
-    "version": "1.0.12",
+    "version": "1.0.13",
     "autoload": {
         "files": [
             "registration.php"
@@ -22,6 +22,9 @@
         "psr-4": {
             "Zero1\\Patches\\": ""
         }
+    },
+    "require": {
+        "composer/semver": "^1.0"
     },
     "suggest": {
         "mdoq/module-connector": "Allows you to apply and test patches quickly and safely."
