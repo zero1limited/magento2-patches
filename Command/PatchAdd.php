@@ -1,15 +1,10 @@
 <?php
 namespace Zero1\Patches\Command;
 
-use Magento\Framework\Component\ComponentRegistrar;
-use Magento\Framework\Component\ComponentRegistrarInterface;
-use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
-use Magento\Framework\App\Filesystem\DirectoryList;
-use Magento\Framework\Composer\ComposerJsonFinder;
-use Magento\Framework\App\ProductMetadata;
+use Composer\Semver\Semver;
 
 class PatchAdd extends AbstractPatch
 {
@@ -49,7 +44,7 @@ class PatchAdd extends AbstractPatch
         $output->writeln('Message: '.$message);
         $output->writeln("Magento Version: ".$this->getVersion());
 
-        $patch = $this->resolvePatch($patchName);
+        $patch = $this->resolvePatch($patchName, $output);
         if(!$patch){
             $output->writeln('<error>Unable to resolve "'.$patchName.'", to a patch.</error>');
             return \Magento\Framework\Console\Cli::RETURN_FAILURE;
@@ -67,18 +62,27 @@ class PatchAdd extends AbstractPatch
         $output->writeln('You can now run: "composer install" to apply the patch.');
     }
 
-    protected function resolvePatch($patchName)
+    protected function resolvePatch($patchName, OutputInterface $output)
     {
         $version = $this->getVersion();
         $patchConfig = $this->getPatchConfig();
 
         $patch = false;
         foreach($patchConfig as $patchId => $patchInfo){
-            if($patchInfo['name'] == $patchName && in_array($version, $patchInfo['versions'])){
-                $patch = $patchInfo;
+            if($patchInfo['name'] == $patchName){
+                $output->writeln('Found patch, evaluating version');
+                foreach($patchInfo['versions'] as $constraint){
+                    $satisfied = Semver::satisfies($version, $constraint);
+                    $output->writeln($constraint.' satisfied by '.$version.' '.json_encode($satisfied));
+                    if($satisfied){
+                        return $patchInfo;
+                    }
+                }
+                $output->writeln('<error>Unable to find a compatible version'.PHP_EOL.print_r($patchInfo['versions'], true).'</error>');
                 break;
             }
         }
+        $output->writeln('<error>Unable to find patch by name</error>');
         return $patch;
     }
 
