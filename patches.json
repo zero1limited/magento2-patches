@@ -107,7 +107,7 @@
       "name": "Credit_Memo_Amount_Format_Errors",
       "description": "Magento Credit Memos fail due to £ symbol inserted into field and causing exception",
       "versions": [
-        "2.4.1","2.4.2","2.4.3"
+        "2.4.*"
       ],
     "base_dir": "patches",
     "files": {
