@@ -1,0 +1,10 @@
+--- Gateway/Command/GatewayCommand.php	2021-12-13 15:36:42.722432111 +0000
++++ Gateway/Command/GatewayCommand.php	2021-12-13 15:50:10.795766098 +0000
+@@ -119,6 +119,7 @@
+      */
+     private function getExceptionMessage($response): Phrase
+     {
++    	return __('Your payment could not be taken. Please try again or use a different payment method.');
+         if (!isset($response['object']) || empty($response['object']->message)) {
+             return __('Your payment could not be taken. Please try again or use a different payment method.');
+         }
