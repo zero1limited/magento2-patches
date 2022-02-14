@@ -8,7 +8,7 @@ use Composer\Semver\Semver;
 
 class PatchAdd extends AbstractPatch
 {
-    const BASE_URL = 'https://raw.githubusercontent.com/zero1limited/magento2-patches/master';
+    const BASE_URL = 'vendor/zero1limited/magento2-patches';
     
     protected function configure()
     {
