@@ -104,12 +104,12 @@
   },
     
   "MDVA-43395": {
-      "name": "zero1_MDVA-43395",
+      "name": "MDVA-43395",
       "description": "Security updates available for Adobe Commerce APSB22-12",
       "link": "https://support.magento.com/hc/en-us/articles/4426353041293-Security-updates-available-for-Adobe-Commerce-APSB22-12-",
       "versions": [
-        "2.3",
-        "2.4"
+        "2.3.*",
+        "2.4.*"
       ],
     "base_dir": "patches",
     "files": {
