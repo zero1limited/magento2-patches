@@ -114,11 +114,9 @@
     "base_dir": "patches",
     "files": {
         "magento/module-email": "zero1_MDVA-43395_part1.patch",
-        "magento/framework": "zero1_MDVA-43395_part2.patch",
-        
+        "magento/framework": "zero1_MDVA-43395_part2.patch"
     }
   },
- 
         "Credit_Memo_Amount_Format_Errors": {
       "name": "Credit_Memo_Amount_Format_Errors",
       "description": "Magento Credit Memos fail due to £ symbol inserted into field and causing exception",
