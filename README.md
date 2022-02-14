@@ -14,7 +14,7 @@ php bin/magento module:enable Zero1_Patches
 ### Installing/Applying a Patch
 ```
 php bin/magento patch:list
-php bin/magento patch:add --patch=PRODSECBUG-2198
+php bin/magento patch:add --patch=MDVA-43395
 composer install
 ```
 
