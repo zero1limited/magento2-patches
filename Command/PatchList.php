@@ -24,10 +24,8 @@ class PatchList extends AbstractPatch
         $output->writeln("Magento Version: ".$this->getVersion());
         foreach($this->getPatchConfig() as $patchId => $patchInfo){
             if(in_array($this->getVersion(), $patchInfo['versions'])){
-                $output->writeln(
-                    $patchInfo['name'].' - '.$patchInfo['description']
-                );
-                $output->writeln('More info can be found here: '.$patchInfo['link']);
+                $output->writeln($patchInfo['name'].' - '.$patchInfo['description'].' - More info: '.$patchInfo['link']);
+                $output->writeln('To apply this patch, run "bin/magento patch:add --patch='.$patchInfo['name'].'" ');
                 $output->writeln('');
             }
         }
