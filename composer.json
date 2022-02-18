@@ -24,7 +24,8 @@
         }
     },
     "require": {
-        "composer/semver": "^1.0"
+        "composer/semver": "^1.0",
+        "cweagans/composer-patches": "^1.6.5"
     },
     "suggest": {
         "mdoq/module-connector": "Allows you to apply and test patches quickly and safely."
