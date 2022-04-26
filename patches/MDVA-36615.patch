@@ -1,0 +1,19 @@
+--- Ui/DataProvider/Product/ProductCollection.php	2022-04-26 13:54:51.194868202 +0000
++++ Ui/DataProvider/Product/ProductCollection.php	2022-04-26 13:56:12.395444804 +0000
+@@ -33,16 +33,8 @@
+      */
+     public function getSize()
+     {
+-        $sql = $this->getSelectCountSql();
+-        $possibleCount = $this->analyzeCount($sql);
+-
+-        if ($possibleCount > 20000) {
+-            return $possibleCount;
+-        }
+-
+         return parent::getSize();
+     }
+-
+     /**
+      * Analyze amount of entities in DB.
+      *
