@@ -127,7 +127,17 @@
         "magento/module-email": "zero1_MDVA-43443_2.3.4_part1.patch",
         "magento/framework": "zero1_MDVA-43443_2.3.4_part2.patch"
     }
+  },
+  "MDVA-36615": {
+    "name": "MDVA-36615",
+    "description": "Fix for wrong filter count in admin",
+    "link": "https://magento.stackexchange.com/questions/340351/admin-grid-is-showing-wrong-filter-count-magento-2-4-2",
+    "versions": [
+      "2.4.*"
+    ],
+  "base_dir": "patches",
+  "files": {
+      "magento/module-catalog": "zero1_MDVA-36615.patch"
+    }
   }
-
-  
 }
