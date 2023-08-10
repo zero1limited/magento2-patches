@@ -1,0 +1,49 @@
+--- Model/Client/Payments.php	2023-08-10 09:17:23.995292037 +0100
++++ Model/Client/Payments.php	2023-08-10 09:17:23.995292037 +0100
+@@ -13,6 +13,7 @@
+ use Magento\Sales\Api\Data\OrderInterface;
+ use Magento\Sales\Model\Order;
+ use Magento\Sales\Model\OrderRepository;
++use Magento\Sales\Model\OrderRepositoryFactory;
+ use Mollie\Api\MollieApiClient;
+ use Mollie\Api\Resources\Payment as MolliePayment;
+ use Mollie\Api\Types\PaymentStatus;
+@@ -53,6 +54,10 @@
+      */
+     private $orderRepository;
+     /**
++     * @var OrderRepositoryFactory
++     */
++    private $orderRepositoryFactory;
++    /**
+      * @var CheckoutSession
+      */
+     private $checkoutSession;
+@@ -157,6 +162,7 @@
+      */
+     public function __construct(
+         OrderRepository $orderRepository,
++        OrderRepositoryFactory $orderRepositoryFactory,
+         CheckoutSession $checkoutSession,
+         MollieHelper $mollieHelper,
+         OrderCommentHistory $orderCommentHistory,
+@@ -177,6 +183,7 @@
+         ExpiredOrderToTransaction $expiredOrderToTransaction
+     ) {
+         $this->orderRepository = $orderRepository;
++        $this->orderRepositoryFactory = $orderRepositoryFactory;
+         $this->checkoutSession = $checkoutSession;
+         $this->mollieHelper = $mollieHelper;
+         $this->orderCommentHistory = $orderCommentHistory;
+@@ -250,6 +257,11 @@
+         $paymentData = $this->mollieHelper->validatePaymentData($paymentData);
+         $this->mollieHelper->addTolog('request', $paymentData);
+         $payment = $mollieApi->payments->create($paymentData);
++
++        // we have to re-create the repo to stop it's internal, unclearable
++        // cache from being used when re-loading the order.
++        $this->orderRepository = $this->orderRepositoryFactory->create();
++        $order = $this->orderRepository->get($order->getId());
+         $this->processResponse($order, $payment);
+ 
+         // Order is paid immediately (eg. Credit Card with Components, Apple Pay), process transaction
