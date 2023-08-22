@@ -154,7 +154,7 @@
     ],
   "base_dir": "patches",
   "files": {
-      "magento/module-catalog": "zero1_AC-9260_2.4.4.patch"
+      "magento/magento2-base": "zero1_AC-9260_2.4.4.patch"
     }
   },
   "AC-9260": {
@@ -170,7 +170,7 @@
     ],
   "base_dir": "patches",
   "files": {
-      "magento/module-catalog": "zero1_AC-9260_2.4.5.patch"
+      "magento/magento2-base": "zero1_AC-9260_2.4.5.patch"
     }
   }
 }
