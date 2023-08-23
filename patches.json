@@ -140,7 +140,7 @@
       "magento/module-catalog": "zero1_MDVA-36615.patch"
     }
   },
-  "AC-9260": {
+  "AC-9260_2.4.4": {
     "name": "AC-9260_2.4.4",
     "description": "jQuery UI Library Vulnerability",
     "link": "https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/jquery-cve-2022-31160-fix-2.4.4-2.4.5-2.4.6.html?lang=en",
@@ -149,12 +149,12 @@
       "2.4.4-p1",
       "2.4.4-p2",
       "2.4.4-p3",
-      "2.4.4-p4",
-      "2.4.4-p5"
+      "2.4.4-p4"
     ],
   "base_dir": "patches",
   "files": {
-      "magento/magento2-base": "zero1_AC-9260_2.4.4.patch"
+      "magento/magento2-base": "zero1_AC-9260_2.4.4_part1.patch",
+      "magento/module-theme": "zero1_AC-9260_2.4.4_part2.patch"
     }
   },
   "AC-9260": {
