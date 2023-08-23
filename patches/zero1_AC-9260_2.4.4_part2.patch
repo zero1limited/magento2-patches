@@ -1,0 +1,32 @@
+diff --git a/vendor/magento/module-theme/view/adminhtml/requirejs-config.js b/vendor/magento/module-theme/view/adminhtml/requirejs-config.js
+index 431e04604999..948bd2a57c30 100644
+--- a/vendor/magento/module-theme/view/adminhtml/requirejs-config.js
++++ b/vendor/magento/module-theme/view/adminhtml/requirejs-config.js
+@@ -88,13 +88,6 @@ var config = {
+         'mage/backend/bootstrap',
+         'mage/adminhtml/globals'
+     ],
+-    config: {
+-        mixins: {
+-            'jquery/jquery-ui': {
+-                'jquery/patches/jquery-ui-sortable': true
+-            }
+-        }
+-    },
+     'paths': {
+         'jquery/ui': 'jquery/jquery-ui'
+     }
+diff --git a/vendor/magento/module-theme/view/frontend/requirejs-config.js b/vendor/magento/module-theme/view/frontend/requirejs-config.js
+index fb649f75d90b..0a064cd0cd3d 100644
+--- a/vendor/magento/module-theme/view/frontend/requirejs-config.js
++++ b/vendor/magento/module-theme/view/frontend/requirejs-config.js
+@@ -40,9 +40,6 @@ var config = {
+         mixins: {
+             'Magento_Theme/js/view/breadcrumbs': {
+                 'Magento_Theme/js/view/add-home-breadcrumb': true
+-            },
+-            'jquery/ui-modules/widgets/sortable': {
+-                'jquery/patches/jquery-ui-sortable': true
+             }
+         }
+     }
