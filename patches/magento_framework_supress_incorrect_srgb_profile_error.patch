@@ -1,5 +1,5 @@
---- vendor/magento/framework/Image/Adapter/Gd2.php	2025-10-06 08:06:36.000000000 +0000
-+++ Gd2.php	2025-12-02 10:07:11.661327539 +0000
+--- Image/Adapter/Gd2.php	2025-10-06 08:06:36.000000000 +0000
++++ Image/Adapter/Gd2.php	2025-12-02 10:07:11.661327539 +0000
 @@ -77,10 +77,21 @@
              throw new \OverflowException('Memory limit has been reached.');
          }
