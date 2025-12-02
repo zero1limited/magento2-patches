@@ -28,6 +28,23 @@ If you need to apply a Magento patch which is not currently listed please reach 
 
 
 
+- `libpng warning: iCCP: known incorrect sRGB profile`
+  Info: [https://magento.stackexchange.com/questions/358423/magento-2-4-libpng-warning-iccp-known-incorrect-srgb-profile-wrong-file-file](https://magento.stackexchange.com/questions/358423/magento-2-4-libpng-warning-iccp-known-incorrect-srgb-profile-wrong-file-file)
+
+  Patch: `patches/magento_framework_supress_incorrect_srgb_profile_error.patch`
+
+  composer.json config:
+  ```json
+  ...
+  "extra": {
+    "patches": {
+        "magento/framework": {
+            "libpng warning: iCCP: known incorrect sRGB profile": "https://raw.githubusercontent.com/zero1limited/magento2-patches/master/patches/magento_framework_supress_incorrect_srgb_profile_error.patch"
+        }
+    }
+  }
+  ...
+  ```
 
 
 
